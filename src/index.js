@@ -7,7 +7,7 @@ const lipHeight = 10;
 const base = () => {
   return union(
     difference(
-      pill([width + 70, height + 70]).linear_extrude(3),
+      pill([width + 50, height + 70]).linear_extrude(3),
       pill([width, height]).linear_extrude(5).translate_z(-1),
     )
   )
@@ -31,10 +31,10 @@ const edge = () => {
       cube([200, 200, 100]).translate_y(height / 6)
 
     ),
-    pill([width - 15, height - 15]).linear_extrude(lipHeight * 2),
+    pill([width - 15, height - 30]).linear_extrude(lipHeight * 2),
   )
 }
 
 export default function () {
-  return union(base(), lip(), edge());
+  return union(base(), lip(), edge()).scale_y(0.6);
 }

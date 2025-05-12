@@ -1,122 +1,93 @@
 $fn = 100;
-union()
+scale(v = [1, 0.6, 1])
 {
   union()
   {
-    difference()
+    union()
     {
-      linear_extrude(height = 3, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+      difference()
       {
-        rotate(a = 90, v = [0, 0, 1])
-        {
-          union()
-          {
-            square(size = [155, 165], center = true);
-            translate(v = [77.5, 0, 0])
-            {
-              circle(r = 82.5);
-            }
-            translate(v = [-77.5, 0, 0])
-            {
-              circle(r = 82.5);
-            }
-          }
-        }
-      }
-      translate(v = [0, 0, -1])
-      {
-        linear_extrude(height = 5, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+        linear_extrude(height = 3, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
         {
           rotate(a = 90, v = [0, 0, 1])
           {
             union()
             {
-              square(size = [155, 95], center = true);
-              translate(v = [77.5, 0, 0])
+              square(size = [175, 145], center = true);
+              translate(v = [87.5, 0, 0])
               {
-                circle(r = 47.5);
+                circle(r = 72.5);
               }
-              translate(v = [-77.5, 0, 0])
+              translate(v = [-87.5, 0, 0])
               {
-                circle(r = 47.5);
+                circle(r = 72.5);
               }
             }
           }
         }
-      }
-    }
-  }
-  intersection()
-  {
-    difference()
-    {
-      linear_extrude(height = 10, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
-      {
-        rotate(a = 90, v = [0, 0, 1])
+        translate(v = [0, 0, -1])
         {
-          union()
+          linear_extrude(height = 5, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
           {
-            square(size = [155, 115], center = true);
-            translate(v = [77.5, 0, 0])
+            rotate(a = 90, v = [0, 0, 1])
             {
-              circle(r = 57.5);
-            }
-            translate(v = [-77.5, 0, 0])
-            {
-              circle(r = 57.5);
-            }
-          }
-        }
-      }
-      translate(v = [0, 0, -1])
-      {
-        linear_extrude(height = 20, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
-        {
-          rotate(a = 90, v = [0, 0, 1])
-          {
-            union()
-            {
-              square(size = [155, 95], center = true);
-              translate(v = [77.5, 0, 0])
+              union()
               {
-                circle(r = 47.5);
-              }
-              translate(v = [-77.5, 0, 0])
-              {
-                circle(r = 47.5);
+                square(size = [155, 95], center = true);
+                translate(v = [77.5, 0, 0])
+                {
+                  circle(r = 47.5);
+                }
+                translate(v = [-77.5, 0, 0])
+                {
+                  circle(r = 47.5);
+                }
               }
             }
           }
         }
       }
     }
-    translate(v = [0, 41.666666666666664, 0])
-    {
-      cube(size = [200, 200, 100], center = true);
-    }
-  }
-  difference()
-  {
     intersection()
     {
-      translate(v = [0, 0, 10])
+      difference()
       {
-        cube(size = [95, 250, 4], center = true);
-      }
-      linear_extrude(height = 10, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
-      {
-        rotate(a = 90, v = [0, 0, 1])
+        linear_extrude(height = 10, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
         {
-          union()
+          rotate(a = 90, v = [0, 0, 1])
           {
-            square(size = [155, 105], center = true);
-            translate(v = [77.5, 0, 0])
+            union()
             {
-              circle(r = 52.5);
+              square(size = [155, 115], center = true);
+              translate(v = [77.5, 0, 0])
+              {
+                circle(r = 57.5);
+              }
+              translate(v = [-77.5, 0, 0])
+              {
+                circle(r = 57.5);
+              }
             }
-            translate(v = [-77.5, 0, 0])
+          }
+        }
+        translate(v = [0, 0, -1])
+        {
+          linear_extrude(height = 20, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+          {
+            rotate(a = 90, v = [0, 0, 1])
             {
-              circle(r = 52.5);
+              union()
+              {
+                square(size = [155, 95], center = true);
+                translate(v = [77.5, 0, 0])
+                {
+                  circle(r = 47.5);
+                }
+                translate(v = [-77.5, 0, 0])
+                {
+                  circle(r = 47.5);
+                }
+              }
             }
           }
         }
@@ -126,20 +97,52 @@ union()
         cube(size = [200, 200, 100], center = true);
       }
     }
-    linear_extrude(height = 20, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+    difference()
     {
-      rotate(a = 90, v = [0, 0, 1])
+      intersection()
       {
-        union()
+        translate(v = [0, 0, 10])
         {
-          square(size = [155, 80], center = true);
-          translate(v = [77.5, 0, 0])
+          cube(size = [95, 250, 4], center = true);
+        }
+        linear_extrude(height = 10, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+        {
+          rotate(a = 90, v = [0, 0, 1])
           {
-            circle(r = 40);
+            union()
+            {
+              square(size = [155, 105], center = true);
+              translate(v = [77.5, 0, 0])
+              {
+                circle(r = 52.5);
+              }
+              translate(v = [-77.5, 0, 0])
+              {
+                circle(r = 52.5);
+              }
+            }
           }
-          translate(v = [-77.5, 0, 0])
+        }
+        translate(v = [0, 41.666666666666664, 0])
+        {
+          cube(size = [200, 200, 100], center = true);
+        }
+      }
+      linear_extrude(height = 20, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+      {
+        rotate(a = 90, v = [0, 0, 1])
+        {
+          union()
           {
-            circle(r = 40);
+            square(size = [140, 80], center = true);
+            translate(v = [70, 0, 0])
+            {
+              circle(r = 40);
+            }
+            translate(v = [-70, 0, 0])
+            {
+              circle(r = 40);
+            }
           }
         }
       }
