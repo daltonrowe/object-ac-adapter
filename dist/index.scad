@@ -13,14 +13,14 @@ scale(v = [1, 0.7, 1])
           {
             union()
             {
-              square(size = [175, 145], center = true);
-              translate(v = [87.5, 0, 0])
+              square(size = [170, 160], center = true);
+              translate(v = [85, 0, 0])
               {
-                circle(r = 72.5);
+                circle(r = 80);
               }
-              translate(v = [-87.5, 0, 0])
+              translate(v = [-85, 0, 0])
               {
-                circle(r = 72.5);
+                circle(r = 80);
               }
             }
           }

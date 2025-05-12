@@ -7,7 +7,7 @@ const lipHeight = 10;
 const base = () => {
   return union(
     difference(
-      pill([width + 50, height + 70]).linear_extrude(3),
+      pill([width + 65, height + 80]).linear_extrude(3),
       pill([width, height]).linear_extrude(5).translate_z(-1),
     )
   )
