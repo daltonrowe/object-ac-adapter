@@ -36,5 +36,5 @@ const edge = () => {
 }
 
 export default function () {
-  return union(base(), lip(), edge()).scale_y(0.6);
+  return union(base(), lip(), edge()).scale_y(0.7);
 }
