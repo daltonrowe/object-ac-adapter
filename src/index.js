@@ -2,6 +2,7 @@ import { cube, difference, intersection, pill, union } from "scad-js-esm";
 
 const width = 95;
 const height = 250;
+const lipHeight = 10;
 
 const base = () => {
   return union(
@@ -15,7 +16,7 @@ const base = () => {
 const lip = () => {
   return intersection(
     difference(
-      pill([width + 20, height + 20]).linear_extrude(7),
+      pill([width + 20, height + 20]).linear_extrude(lipHeight),
       pill([width, height]).linear_extrude(20).translate_z(-1),
     ),
     cube([200, 200, 100]).translate_y(height / 6)
@@ -25,12 +26,12 @@ const lip = () => {
 const edge = () => {
   return difference(
     intersection(
-      cube([width, height, 4]).translate_z(5),
-      pill([width + 10, height + 10]).linear_extrude(10),
+      cube([width, height, 4]).translate_z(lipHeight),
+      pill([width + 10, height + 10]).linear_extrude(lipHeight),
       cube([200, 200, 100]).translate_y(height / 6)
 
     ),
-    pill([width - 15, height - 15]).linear_extrude(10),
+    pill([width - 15, height - 15]).linear_extrude(lipHeight * 2),
   )
 }
 

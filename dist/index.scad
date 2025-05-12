@@ -50,7 +50,7 @@ union()
   {
     difference()
     {
-      linear_extrude(height = 7, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+      linear_extrude(height = 10, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
       {
         rotate(a = 90, v = [0, 0, 1])
         {
@@ -99,7 +99,7 @@ union()
   {
     intersection()
     {
-      translate(v = [0, 0, 5])
+      translate(v = [0, 0, 10])
       {
         cube(size = [95, 250, 4], center = true);
       }
@@ -126,7 +126,7 @@ union()
         cube(size = [200, 200, 100], center = true);
       }
     }
-    linear_extrude(height = 10, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
+    linear_extrude(height = 20, center = false, convexity = undef, twist = undef, slices = undef, scale = 1, $fn = 20)
     {
       rotate(a = 90, v = [0, 0, 1])
       {
